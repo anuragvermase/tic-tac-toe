@@ -1,3 +1,7 @@
+.grid-wrapper{
+    max-width: 500px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap; 
@@ -10,4 +14,16 @@
 
 .turn-highlight{
     color: white;
+}
+
+.reset{
+    padding: 1rem;
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    background-color: var(--resetGreen);
+    border-radius: 10%;
+    border: none;
+    width: 100%;
+
 }
