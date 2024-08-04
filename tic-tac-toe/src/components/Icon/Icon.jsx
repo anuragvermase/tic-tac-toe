@@ -1,4 +1,7 @@
 import { FaTimes, FaPen, FaRegCircle } from "react-icons/fa";
+//Optimise code {to not render all the icons, only render one icon which i clicked}
+import {memo} from  'react'
+import React from "react";
 
 function Icon({ name }){
   if (name=="circle") {
@@ -10,4 +13,4 @@ function Icon({ name }){
   }
 }
 
-export default Icon;
+export default memo(Icon);

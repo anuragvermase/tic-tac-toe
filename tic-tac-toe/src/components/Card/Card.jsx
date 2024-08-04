@@ -1,8 +1,8 @@
 import Icon from "../Icon/Icon";
-
+import { memo } from "react";
 import "./Card.css"
 
-function Card({ onPlay, player, index} ){
+function Card({ onPlay, player, index, gameEnd} ){
 
     let icon = <Icon />
     if(player == "X"){
@@ -12,10 +12,10 @@ function Card({ onPlay, player, index} ){
     }
 
     return (
-        <div className='card' onClick={() =>player =="" && onPlay(index)}>
+        <div className='card' onClick={() => !gameEnd && player =="" && onPlay(index)}> {/*if game wasn't ended and the card is untouched then we click the card to change*/} 
             {icon}
         </div>
     );
 } 
 
-export default Card;
+export default memo(Card);
